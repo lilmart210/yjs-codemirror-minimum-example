@@ -1,0 +1,40 @@
+
+
+.Main {
+  width : 100vw;
+  height : 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.Editor {
+  height : 50%;
+  width : 50%;
+  border : 1px solid gray;
+  border-radius: 2px;
+}
+
+.Editor > *{
+  height : 100%;
+}
+
+.remote-cursor {
+  position: absolute;
+  border-left-width: 2px;
+  border-left-style: solid;
+  height: 1.2em; /* Height of the line */
+  margin-top: -0.2em; /* Adjust to align with text */
+  pointer-events: none;
+  z-index: 100;
+  border-left: 2px solid var(--remote-cursor);
+}
+
+.remote-selection {
+    /* Just in case you want to enforce specific sizing behavior */
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: var(--remote-background);
+}
